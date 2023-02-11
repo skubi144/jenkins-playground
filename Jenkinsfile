@@ -6,6 +6,7 @@ pipeline {
         stage('Test') {
             steps{
                 sh 'echo Hello'
+                sh 'ls'
                 sh 'npm i'
                 sh 'npm run cypress:ci'
             }
