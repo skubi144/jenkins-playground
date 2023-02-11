@@ -9,10 +9,8 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker { image 'node:16.13.1-alpine' }
-            }
             steps{
+                sh 'npm i'
                 sh 'npm run cypress:ci'
             }
         }
