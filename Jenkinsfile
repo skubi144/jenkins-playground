@@ -8,7 +8,7 @@ pipeline {
                 sh 'echo Hello'
                 sh 'ls'
                 sh 'npm install'
-                sh 'tree node_modules'
+                sh 'ls node_modules'
                 sh 'npm run cypress:ci'
             }
         }
