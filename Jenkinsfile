@@ -5,7 +5,9 @@ pipeline {
     stages {
         stage('Test') {
             steps{
-                sh 'npx cypress run'
+                sh 'npm install'
+                sh '$(npm bin)/cypress verify'
+                sh '$(npm bin)/cypress '
             }
         }
     }
