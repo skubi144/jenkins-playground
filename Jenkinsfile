@@ -9,7 +9,7 @@ pipeline {
                 sh 'ls'
                 sh 'npm install'
                 sh 'ls node_modules'
-                sh 'npm run cypress:ci'
+                sh './node_modules/.bin/cypress run'
             }
         }
     }
