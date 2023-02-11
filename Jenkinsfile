@@ -7,7 +7,8 @@ pipeline {
             steps{
                 sh 'echo Hello'
                 sh 'ls'
-                sh 'npm i'
+                sh 'npm install'
+                sh 'tree node_modules'
                 sh 'npm run cypress:ci'
             }
         }
