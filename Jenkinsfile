@@ -9,8 +9,11 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                echo 'Testing.....'
+            agent {
+                docker "cypress/included:12.3.0"
+            }
+            steps{
+                sh 'npm run cypress:ci'
             }
         }
         stage('Deploy') {
