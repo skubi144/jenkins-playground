@@ -14,6 +14,7 @@ pipeline {
                     docker { image 'cypress/included:12.3.0' }
             }
             steps{
+                sh 'cypress'
                 sh 'npm run cypress:ci'
             }
         }
