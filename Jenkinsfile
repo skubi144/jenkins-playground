@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'cypress/included:12.3.0' }
+        docker { image 'cypress/included:12.5.1' }
         }
     stages {
         stage('Test') {
