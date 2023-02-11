@@ -1,11 +1,12 @@
 pipeline {
     agent {
-        docker { image 'cypress/included:12.5.1' }
+        docker { image 'node:16.13.1-alpine ' }
         }
     stages {
         stage('Test') {
             steps{
                 sh 'echo Hello'
+                sh 'npm i'
                 sh 'npm run cypress:ci'
             }
         }
