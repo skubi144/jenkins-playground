@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             agent {
-                docker "cypress/included:12.3.0"
+                docker { image 'node:16.13.1-alpine' }
             }
             steps{
                 sh 'npm run cypress:ci'
