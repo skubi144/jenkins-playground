@@ -6,8 +6,7 @@ pipeline {
         stage('Test') {
             steps{
                 sh 'npm install'
-                sh '$(npm bin)/cypress verify'
-                sh '$(npm bin)/cypress '
+                sh 'npm run e2e'
             }
         }
     }
